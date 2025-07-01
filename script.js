@@ -1,7 +1,7 @@
 var username;
 
 async function getdata() {
-    let accessToken = 'ADD THE API TOKEN FROM=> https://github.com/settings/tokens ';
+    let accessToken = process.env.TOKEN;
     let url = `https://api.github.com/users/${username}?access_token=${accessToken}`;
 
     const headers = {
